@@ -4,6 +4,7 @@
 - La vista de inicio dejamos la de Bootstrap.
 - Las otras 4 vistas apuntan a la misma plantilla (formulario_generico.html), donde por contexto le pasamos los formularios a mostrar.
 Hay un formulario para agregar registro al modelo y un formulario para buscar en el modelo:
+
       - Profesores: Se busca por Apellido
       - Cursos: Se busca por Camada
       - Estudiantes: Se busca por Apellido
