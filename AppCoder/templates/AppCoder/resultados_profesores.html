@@ -1,0 +1,22 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<hr>
+
+<p> Estamos buscando el apellido {{apellido}}:</p>
+
+
+{% if profes %}
+<ul>
+{% for profe in profes %}
+    <li>{{profe.nombre}} {{profe.apellido}} | {{profe.email}}</li>
+{% endfor %}
+</ul>
+{% endif %}
+
+<hr>
+
+{% endblock contenidoQueCambia %}

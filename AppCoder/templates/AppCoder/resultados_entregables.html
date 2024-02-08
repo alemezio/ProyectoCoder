@@ -1,0 +1,22 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<hr>
+
+<p> Estamos buscando el nombre {{nombre}}:</p>
+
+
+{% if entregables %}
+<ul>
+{% for entregable in entregables %}
+    <li>{{entregable.nombre}} {{entregable.fecha_entrega}} | {{entregable.entregado}}</li>
+{% endfor %}
+</ul>
+{% endif %}
+
+<hr>
+
+{% endblock contenidoQueCambia %}

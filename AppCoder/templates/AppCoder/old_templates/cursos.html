@@ -1,0 +1,41 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<hr>
+
+    <h2>Formulario para agregar Curso y Camada</h2>
+
+{% if mi_form.errors %}
+<p style="color: red">Estan mal los datos, revisar</p>
+{% endif %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <!-- Aca esta la magia de Django-->
+    <table>
+        {{mi_form.as_table}}
+    </table>
+    <input type="submit" value="Enviar">
+</form>
+<hr>
+
+{% if busqueda.errors %}
+<p style="color: red">Estan mal los datos para el formulario de la búsqueda, revisar</p>
+{% endif %}
+
+    <h2>Formulario para buscar Cursos por Camada</h2>
+
+    <form action='../buscar/' method='GET'>
+        <table>
+            {{busqueda.as_table}}
+        </table>
+        <!-- <input type="number" name="camada" id="camada"> -->
+        <input type="submit" value="Buscar">
+    </form>
+
+    <hr>
+
+{% endblock contenidoQueCambia %}
